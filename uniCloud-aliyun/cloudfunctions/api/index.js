@@ -17,7 +17,7 @@ exports.main = async (event, context) => {
 			return response.success(resp)
 			break;
 		case '/openid':
-			var openid = await getOpenId(event.queryStringParameters.jsCode)
+			var openid = await getOpenId(event.jsCode)
 			resp.openid = openid
 			return response.success(resp)
 			break;
